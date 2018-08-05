@@ -32,6 +32,7 @@ class UserProfile extends Component {
     headers:{"Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Credentials":true,
+      'Authorization': 'Token 025840824f53b9794873e3f9e38b9c91b12cf3fd',
 
             }
 
