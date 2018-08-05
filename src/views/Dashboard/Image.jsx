@@ -20,7 +20,7 @@ export default class MyUploader extends Component {
 uploadHandler = () => {
   var headers = {
            'Content-Type': 'application/json',
-           'Authorization': 'Token <token>',
+           'Authorization': 'Token 025840824f53b9794873e3f9e38b9c91b12cf3fd',
            'Access-Control-Allow-Origin': '*',
        }
   axios.post('https://36f1d73f.ngrok.io/api/file_upload/', this.state.selectedFile,headers)

@@ -19,7 +19,7 @@ import {
   legendBar
 } from "variables/Variables.jsx";
 
-const URL = 'http://localhost:4000/events';
+const URL = 'http://36f1d73f.ngrok.io/api/events/';
 class Dashboard extends Component {
   constructor(props){
   super(props);
@@ -56,7 +56,7 @@ class Dashboard extends Component {
       <div className="content">
         <Grid fluid>
 
-        
+
           <EventList event={this.state.events}></EventList>
         </Grid>
       </div>
