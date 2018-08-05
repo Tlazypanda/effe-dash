@@ -21,6 +21,7 @@ uploadHandler = () => {
   var headers = {
            'Content-Type': 'application/json',
            'Authorization': 'Token <token>',
+           'Access-Control-Allow-Origin': '*',
        }
   axios.post('https://36f1d73f.ngrok.io/api/file_upload/', this.state.selectedFile,headers)
   .then((response) => {
