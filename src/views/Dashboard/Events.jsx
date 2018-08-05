@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import { Grid, Row, Col } from "react-bootstrap";
 import ChartistGraph from "react-chartist";
 import { Card } from "components/Card/Card.jsx";
+import  MyUploader  from "./Image.jsx";
 import {
   dataPie,
   legendPie,
@@ -16,7 +17,7 @@ import {
   legendBar
 } from "variables/Variables.jsx";
 
-const URL = 'http://localhost:4000/mentors';
+const URL = 'http://localhost:4000/events';
 const EventList = (props) =>
   { console.log(props);
     const list = ({event}) =>{
@@ -25,24 +26,25 @@ const EventList = (props) =>
 
         return(
         <Col md={4}>
+
           <Card
-            statsIcon="fa fa-history"
-            id="chartHours"
-            title="Users Behavior"
-            category="24 Hours performance"
-            stats="Updated 3 minutes ago"
+
+            title={item.event_name}
+            category={item.prize}
+            stats={item.points}
             content={
-              <div className="ct-chart">
-                <ChartistGraph
-                  data={dataSales}
-                  type="Line"
-                  options={optionsSales}
-                  responsiveOptions={responsiveSales}
-                />
+              <div>
+              <div>
+              {item.description}
               </div>
+              <div>
+                <MyUploader />
+                </div>
+                </div>
             }
 
           />
+
         </Col>
 
 
