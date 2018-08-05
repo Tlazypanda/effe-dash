@@ -14,7 +14,7 @@ import { UserCard } from "components/UserCard/UserCard.jsx";
 import Button from "components/CustomButton/CustomButton.jsx";
 
 import avatar from "assets/img/faces/face-3.jpg";
-const URL = 'http://36f1d73f.ngrok.io/api/regularuser/';
+const URL = 'http://36f1d73f.ngrok.io/api/regular_user/';
 class UserProfile extends Component {
   constructor(props){
   super(props);

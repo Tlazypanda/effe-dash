@@ -10,20 +10,27 @@ export default class MyUploader extends Component {
 
   this.state = {
     selectedFile:null,
+    id:this.props.id,
 
 
   }
+  console.log(this.state);
 }
   fileChangedHandler = (event) => {
-  const file = event.target.files[0]
+
+  this.setState({selectedFile: event.target.files[0]})
 }
 uploadHandler = () => {
+  console.log(this.state);
+  const formData = new FormData()
+  formData.append('myFile', this.state.selectedFile, this.state.id);
+  console.log(formData);
   var headers = {
-           'Content-Type': 'application/json',
+           'Content-Type': 'multipart/form-data',
            'Authorization': 'Token 025840824f53b9794873e3f9e38b9c91b12cf3fd',
            'Access-Control-Allow-Origin': '*',
        }
-  axios.post('https://36f1d73f.ngrok.io/api/file_upload/', this.state.selectedFile,headers)
+  axios.post('https://36f1d73f.ngrok.io/api/file_upload/', formData,headers)
   .then((response) => {
             console.log(response);
            })

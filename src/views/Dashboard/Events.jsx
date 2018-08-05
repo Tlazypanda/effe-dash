@@ -38,7 +38,7 @@ const EventList = (props) =>
               {item.description}
               </div>
               <div>
-                <MyUploader />
+                <MyUploader id={item.id}/>
                 </div>
                 </div>
             }
