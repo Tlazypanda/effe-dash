@@ -19,7 +19,7 @@ import {
   legendBar
 } from "variables/Variables.jsx";
 
-const URL = 'http://36f1d73f.ngrok.io/api/events/';
+const URL = 'http://localhost:8000/api/events/';
 class Dashboard extends Component {
   constructor(props){
   super(props);

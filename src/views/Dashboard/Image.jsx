@@ -24,14 +24,17 @@ uploadHandler = () => {
   const token = localStorage.getItem('token');
   console.log(this.state);
   const formData = new FormData()
-  formData.append('myFile', this.state.selectedFile, this.state.id);
+  formData.append('file', this.state.selectedFile);
+  formData.append('id', this.state.id);
+  
   console.log(formData);
   var headers = {
            'Content-Type': 'multipart/form-data',
-           'Authorization': 'Token ${token}',
+           'Authorization': `Token ${token}`,
            'Access-Control-Allow-Origin': '*',
        }
-  axios.post('https://36f1d73f.ngrok.io/api/file_upload/', formData,headers)
+
+  axios.post('http://localhost:8000/api/file_upload/', formData,{headers:headers})
   .then((response) => {
             console.log(response);
            })
