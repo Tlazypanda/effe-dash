@@ -23,7 +23,7 @@ export class Card extends Component {
             {this.props.legend}
             {this.props.stats != null ? <hr /> : ""}
             <div className="stats">
-              <i className={this.props.statsIcon} /> {this.props.stats}
+              <i className="coin" /> {this.props.stats}
             </div>
           </div>
         </div>

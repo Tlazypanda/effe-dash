@@ -65,14 +65,20 @@ class Sidebar extends Component {
                     }
                     key={key}
                   >
+                    {prop.path[4]===":"?
+                    <a href={prop.path} className="nav-link" activeClassName="active">
+                    <i className={prop.icon} />
+                    <p>{prop.name}</p>
+                    </a>:
                     <NavLink
-                      to={prop.path}
-                      className="nav-link"
-                      activeClassName="active"
-                    >
-                      <i className={prop.icon} />
-                      <p>{prop.name}</p>
-                    </NavLink>
+                    to={prop.path}
+                    className="nav-link"
+                    activeClassName="active"
+                  >
+                    <i className={prop.icon} />
+                    <p>{prop.name}</p>
+                  </NavLink>
+                  }
                   </li>
                 );
               return null;

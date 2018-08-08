@@ -19,8 +19,8 @@ class HeaderLinks extends Component {
           </NavItem>
         </Nav>
         <Nav pullRight>
-          <NavItem eventKey={1} href="/user">
-            Profile
+          <NavItem eventKey={1} href="http://ca.effe.org.in/account/">
+            Account
           </NavItem>
 
           <NavItem eventKey={3} href="#">
