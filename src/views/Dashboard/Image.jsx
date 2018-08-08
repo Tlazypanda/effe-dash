@@ -46,9 +46,9 @@ uploadHandler = () => {
 }
 	render() {
 		return (
-      <div>
+      <div className="text-center">
       <Button bsStyle="warning" ><input type="file" onChange={this.fileChangedHandler} /></Button>
-<Button onClick={this.uploadHandler} bsStyle="primary" fill>Upload</Button>
+<Button  onClick={this.uploadHandler} bsStyle="primary" fill>Upload</Button>
 
 </div>
 		);
