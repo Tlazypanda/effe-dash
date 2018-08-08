@@ -3,6 +3,7 @@ import ImagesUploader from 'react-images-uploader';
 import 'react-images-uploader/styles.css';
 import 'react-images-uploader/font.css';
 import axios from 'axios';
+import Button from 'components/CustomButton/CustomButton';
 
 export default class MyUploader extends Component {
   constructor(props){
@@ -26,7 +27,7 @@ uploadHandler = () => {
   const formData = new FormData()
   formData.append('file', this.state.selectedFile);
   formData.append('id', this.state.id);
-  
+
   console.log(formData);
   var headers = {
            'Content-Type': 'multipart/form-data',
@@ -46,8 +47,8 @@ uploadHandler = () => {
 	render() {
 		return (
       <div>
-      <input type="file" onChange={this.fileChangedHandler} />
-<button onClick={this.uploadHandler}>Upload!</button>
+      <Button bsStyle="warning" ><input type="file" onChange={this.fileChangedHandler} /></Button>
+<Button onClick={this.uploadHandler} bsStyle="primary" fill>Upload</Button>
 
 </div>
 		);

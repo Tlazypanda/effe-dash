@@ -19,12 +19,12 @@ const dashboardRoutes = [
     icon: "pe-7s-user",
     component: UserProfile
   },
-  {
+  /*{
     path: "/leaderboard",
     name: "Leaderboard",
     icon: "pe-7s-note2",
     component: TableList
-  },
+  },*/
 
 
   { redirect: true, path: "/", to: "/dashboard", name: "Dashboard" }
