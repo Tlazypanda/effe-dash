@@ -14,7 +14,7 @@ import { UserCard } from "components/UserCard/UserCard.jsx";
 import Button from "components/CustomButton/CustomButton.jsx";
 
 import avatar from "assets/img/faces/face-3.jpg";
-const URL = 'http://9db40d44.ngrok.io/api/regular_user/';
+const URL = 'http://localhost:8000/api/regular_user/';
 const token = localStorage.getItem('token');
 class UserProfile extends Component {
   constructor(props){
@@ -32,7 +32,7 @@ class UserProfile extends Component {
   { method:'GET',
   headers:{
 
-           'Authorization': `Token 1114961edfded09b736e4876ce31190329d60b10`,
+           'Authorization': `Token Token ${token}`,
            'Access-Control-Allow-Origin': '*',
        },
 

@@ -42,9 +42,7 @@ class Sidebar extends Component {
             href="https://www.effe.org.in"
             className="simple-text logo-mini"
           >
-            <div className="logo-img">
-              <img src={logo} alt="logo_image" />
-            </div>
+          
           </a>
           <a
             href="https://www.effe.org.in"

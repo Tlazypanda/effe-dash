@@ -13,13 +13,13 @@ const dashboardRoutes = [
     icon: "pe-7s-graph",
     component: Dashboard
   },
-  {
+  /*{
     path: "/user",
     name: "User Profile",
     icon: "pe-7s-user",
     component: UserProfile
   },
-  /*{
+  {
     path: "/leaderboard",
     name: "Leaderboard",
     icon: "pe-7s-note2",
