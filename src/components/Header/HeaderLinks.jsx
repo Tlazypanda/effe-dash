@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavItem, Nav, NavDropdown, MenuItem } from "react-bootstrap";
+import Button from "components/CustomButton/CustomButton.jsx";
 
 class HeaderLinks extends Component {
   render() {
@@ -19,9 +20,9 @@ class HeaderLinks extends Component {
           </NavItem>
         </Nav>
         <Nav pullRight>
-        <NavItem eventKey={1} href="http://ca.effe.org.in/account/">
-          Points : 32
-        </NavItem>
+        
+          <Button bsStyle="warning" fill>Points : 32</Button>
+
           <NavItem eventKey={1} href="http://ca.effe.org.in/account/">
             Account
           </NavItem>
