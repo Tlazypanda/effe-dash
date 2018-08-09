@@ -41,7 +41,7 @@ const EventList = (props) =>
               <div>
                 <MyUploader id={item.id}/>
                 </div>
-                <div>
+                <div className="text-center">
                   <Button simple>
                     <i className="fa fa-facebook-square fa-2x" />
                   </Button>
