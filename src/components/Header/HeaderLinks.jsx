@@ -21,13 +21,13 @@ class HeaderLinks extends Component {
         </Nav>
         <Nav pullRight>
         
-          <Button bsStyle="warning" fill>Points : 32</Button>
+          <Button bsStyle="warning" fill>Points : 0</Button>
 
           <NavItem eventKey={1} href="http://ca.effe.org.in/account/">
             Account
           </NavItem>
 
-          <NavItem eventKey={3} href="#">
+          <NavItem eventKey={3} href="http://ca.effe.org.in/user_logout/">
             Log out
           </NavItem>
         </Nav>

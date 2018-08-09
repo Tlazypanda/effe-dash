@@ -1,12 +1,13 @@
 import React, { Component } from "react";
+import Button from "components/CustomButton/CustomButton.jsx";
 
 export class Card extends Component {
   render() {
     return (
       <div className={"card" + (this.props.plain ? " card-plain" : "")}>
         <div className={"header" + (this.props.hCenter ? " text-center" : "")}>
-          <h4 className="title">{this.props.title}</h4>
-          <p className="category">{this.props.category}</p>
+          <h4 className="title">{this.props.title}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Button bsStyle="warning" fill>Points : {this.props.stats}</Button></h4>
+          
         </div>
         <div
           className={
@@ -19,13 +20,7 @@ export class Card extends Component {
         >
           {this.props.content}
 
-          <div className="footer">
-            {this.props.legend}
-            {this.props.stats != null ? <hr /> : ""}
-            <div className="stats">
-              <i className="coin" /> {this.props.stats}
-            </div>
-          </div>
+          
         </div>
       </div>
     );
