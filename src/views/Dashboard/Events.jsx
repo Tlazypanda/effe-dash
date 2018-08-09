@@ -4,6 +4,7 @@ import { Grid, Row, Col } from "react-bootstrap";
 import ChartistGraph from "react-chartist";
 import { Card } from "components/Card/Card.jsx";
 import  MyUploader  from "./Image.jsx";
+import Button from "components/CustomButton/CustomButton.jsx";
 import {
   dataPie,
   legendPie,
@@ -17,7 +18,7 @@ import {
   legendBar
 } from "variables/Variables.jsx";
 
-const URL = 'http://localhost:4000/events';
+const URL = 'http://localhost:4000/mentors';
 const EventList = (props) =>
   { console.log(props);
     const list = ({event}) =>{
@@ -39,6 +40,17 @@ const EventList = (props) =>
               </div>
               <div>
                 <MyUploader id={item.id}/>
+                </div>
+                <div>
+                  <Button simple>
+                    <i className="fa fa-facebook-square fa-2x" />
+                  </Button>
+                  <Button simple>
+                    <i className="fa fa-twitter fa-2x" />
+                  </Button>
+                  <Button simple>
+                    <i className="fa fa-instagram fa-2x" />
+                  </Button>
                 </div>
                 </div>
             }
