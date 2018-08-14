@@ -5,6 +5,8 @@ import 'react-images-uploader/font.css';
 import axios from 'axios';
 import Button from 'components/CustomButton/CustomButton';
 
+
+
 export default class MyUploader extends Component {
   constructor(props){
   super(props);
@@ -19,7 +21,8 @@ export default class MyUploader extends Component {
 }
   fileChangedHandler = (event) => {
 
-  this.setState({selectedFile: event.target.files[0]})
+  this.setState({selectedFile: event.target.files[0]});
+  window.confirm('Are you sure you wish to upload this item?')
 }
 uploadHandler = () => {
   const token = localStorage.getItem('token');
@@ -38,6 +41,7 @@ uploadHandler = () => {
   axios.post('http://localhost:8000/api/file_upload/', formData,{headers:headers})
   .then((response) => {
             console.log(response);
+            window.alert("File uploaded.")
            })
            .catch((error) => {
               console.log(error);
@@ -46,11 +50,13 @@ uploadHandler = () => {
 }
 	render() {
 		return (
+
       <div className="text-center">
-      <Button bsStyle="warning" ><input type="file" onChange={this.fileChangedHandler} /></Button>
+      <input type="file" onChange={this.fileChangedHandler} />
 <Button  onClick={this.uploadHandler} bsStyle="primary" fill>Upload</Button>
 
 </div>
+
 		);
 	}
 }

@@ -19,7 +19,7 @@ import {
   legendBar
 } from "variables/Variables.jsx";
 
-const URL = 'http://localhost:8000/api/events/';
+const URL = 'http://localhost:4000/mentors';
 class Dashboard extends Component {
   constructor(props){
   super(props);

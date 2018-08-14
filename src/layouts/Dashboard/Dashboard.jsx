@@ -9,6 +9,16 @@ import Sidebar from "components/Sidebar/Sidebar";
 import { style } from "variables/Variables.jsx";
 
 import dashboardRoutes from "routes/dashboard.jsx";
+import BrowserSupport, { detectBrowser } from 'react-browser-support'
+
+const minBrowserVersions = {
+    chrome: '4.10',
+    edge: '6',
+    firefox: '19.5',
+    ie: '10',
+    opera: '10.0',
+    safari: '10.2',
+}
 
 class Dashboard extends Component {
   constructor(props) {
@@ -41,6 +51,8 @@ class Dashboard extends Component {
 
   }
   componentDidMount() {
+
+        this.setState({ browser: detectBrowser() });
     this.setState({ _notificationSystem: this.refs.notificationSystem });
     var _notificationSystem = this.refs.notificationSystem;
     var color = Math.floor(Math.random() * 4 + 1);
@@ -61,7 +73,7 @@ class Dashboard extends Component {
       default:
         break;
     }
-    
+
   }
   componentDidUpdate(e) {
     if (
@@ -79,7 +91,9 @@ class Dashboard extends Component {
   }
   render() {
     return (
+
       <div className="wrapper">
+      <BrowserSupport supported={minBrowserVersions}/>
         <NotificationSystem ref="notificationSystem" style={style} />
         <Sidebar {...this.props} />
         <div id="main-panel" className="main-panel" ref="mainPanel">
