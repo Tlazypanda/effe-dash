@@ -18,8 +18,8 @@ const minBrowserVersions = {
 
 const dashboardRoutes = [
   {
-    path: "/dashboard",
-    name: "Dashboard",
+    path: "/events",
+    name: "Events",
     icon: "pe-7s-graph",
     component: Dashboard
   },
@@ -37,7 +37,7 @@ const dashboardRoutes = [
   },*/
 
 
-  { redirect: true, path: "/", to: "/dashboard", name: "Dashboard" }
+  { redirect: true, path: "/", to: "/events", name: "Dashboard" }
 ];
 
 export default dashboardRoutes;

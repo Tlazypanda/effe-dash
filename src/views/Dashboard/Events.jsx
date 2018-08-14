@@ -36,21 +36,23 @@ const EventList = (props) =>
             content={
               <div>
               <div>
-              {item.description}
+              {item.description}<br/>
               </div>
+              <br/>
               <div>
                 <MyUploader id={item.id}/>
                 </div>
                 <div className="text-center">
-                  <Button simple>
-                    <i className="fa fa-facebook-square fa-2x" />
-                  </Button>
-                  <Button simple>
-                    <i className="fa fa-twitter fa-2x" />
-                  </Button>
-                  <Button simple>
-                    <i className="fa fa-instagram fa-2x" />
-                  </Button>
+                  <a href={item.facebook}><Button simple>
+                    <i style={{color:'blue'}} className="fa fa-facebook-square fa-2x" />
+                  </Button></a>
+                  <a href={item.twitter}><Button simple>
+                    <i style={{color:'blue'}} className="fa fa-twitter fa-2x" />
+                  </Button></a>
+
+                  <a href={item.instagram}><Button simple>
+                    <i style={{color:'blue'}} className="fa fa-instagram fa-2x" />
+                  </Button></a>
                 </div>
                 </div>
             }
