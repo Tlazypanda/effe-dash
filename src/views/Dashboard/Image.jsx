@@ -38,7 +38,7 @@ uploadHandler = () => {
            'Access-Control-Allow-Origin': '*',
        }
 
-  axios.post('http://localhost:8000/api/file_upload/', formData,{headers:headers})
+  axios.post('http://ca.effe.org.in/api/file_upload/', formData,{headers:headers})
   .then((response) => {
             console.log(response);
             window.alert("File uploaded.")

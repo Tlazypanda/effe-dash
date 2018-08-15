@@ -5,7 +5,7 @@ import Typography from "views/Typography/Typography";
 import Icons from "views/Icons/Icons";
 import Notifications from "views/Notifications/Notifications";
 import Upgrade from "views/Upgrade/Upgrade";
-import BrowserSupport, { detectBrowser } from 'react-browser-support'
+import BrowserSupport, { detectBrowser } from 'react-browser-support';
 
 const minBrowserVersions = {
     chrome: '4.10',
@@ -20,7 +20,7 @@ const dashboardRoutes = [
   {
     path: "/events",
     name: "Events",
-    icon: "pe-7s-graph",
+    icon: "fa fa-calendar",
     component: Dashboard
   },
   // {
@@ -35,8 +35,6 @@ const dashboardRoutes = [
     icon: "pe-7s-note2",
     component: TableList
   },*/
-
-
   { redirect: true, path: "/", to: "/events", name: "Dashboard" }
 ];
 

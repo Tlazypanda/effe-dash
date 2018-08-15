@@ -14,7 +14,7 @@ import { UserCard } from "components/UserCard/UserCard.jsx";
 import Button from "components/CustomButton/CustomButton.jsx";
 
 import avatar from "assets/img/faces/face-3.jpg";
-const URL = 'http://localhost:8000/api/regular_user/';
+const URL = 'http://ca.effe.org.in/api/regular_user/';
 const token = localStorage.getItem('token');
 class UserProfile extends Component {
   constructor(props){

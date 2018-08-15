@@ -14,14 +14,9 @@ class HeaderLinks extends Component {
     );
     return (
       <div>
-        <Nav>
-          <NavItem eventKey={1} href="/dashboard">
-            <p className="hidden-lg hidden-md">Dashboard</p>
-          </NavItem>
-        </Nav>
         <Nav pullRight>
         
-          <Button bsStyle="warning" fill>Points : 0</Button>
+          <Button className="hidden-xs hidden-sm" bsStyle="warning" fill>Points : 0</Button>
 
           <NavItem eventKey={1} href="http://ca.effe.org.in/account/">
             Account
