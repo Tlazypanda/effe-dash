@@ -14,11 +14,12 @@ class HeaderLinks extends Component {
   }
 }
 componentDidMount(){
+  
 fetch(URL,
 { method:'GET',
 headers:{
-
-         'Authorization': `Token Token ${token}`,
+         "Content-Type": "application/json",
+         'Authorization': `Token ${token}`,
          'Access-Control-Allow-Origin': '*',
      },
 
@@ -46,7 +47,7 @@ headers:{
       <div>
         <Nav pullRight>
 
-          <Button className="hidden-xs hidden-sm" bsStyle="warning" fill>Points : {user.points}</Button>
+          <Button className="hidden-xs hidden-sm" bsStyle="warning" fill>Points : {this.state.user.points}</Button>
 
           <NavItem eventKey={1} href="http://ca.effe.org.in/account/">
             Account
