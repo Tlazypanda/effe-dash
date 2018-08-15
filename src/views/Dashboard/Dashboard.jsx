@@ -19,7 +19,7 @@ import {
   legendBar
 } from "variables/Variables.jsx";
 
-const URL = 'http://ca.effe.org.in/api/file_upload';
+const URL = 'http://ca.effe.org.in/api/regular_user_event/';
 class Dashboard extends Component {
   constructor(props){
   super(props);
