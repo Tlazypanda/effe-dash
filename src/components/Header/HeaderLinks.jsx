@@ -1,8 +1,38 @@
 import React, { Component } from "react";
 import { NavItem, Nav, NavDropdown, MenuItem } from "react-bootstrap";
 import Button from "components/CustomButton/CustomButton.jsx";
-
+const URL = 'http://ca.effe.org.in/api/regular_user/';
+const token = localStorage.getItem('token');
 class HeaderLinks extends Component {
+  constructor(props){
+  super(props);
+
+  this.state = {
+    user:'',
+
+
+  }
+}
+componentDidMount(){
+fetch(URL,
+{ method:'GET',
+headers:{
+
+         'Authorization': `Token Token ${token}`,
+         'Access-Control-Allow-Origin': '*',
+     },
+
+})
+
+.then(response =>
+  {this.setState({user:response});
+  console.log(this.state.user);
+  })
+.catch(function (error)
+{
+  console.log(error);
+});
+}
   render() {
     const notification = (
       <div>
@@ -15,8 +45,8 @@ class HeaderLinks extends Component {
     return (
       <div>
         <Nav pullRight>
-        
-          <Button className="hidden-xs hidden-sm" bsStyle="warning" fill>Points : 0</Button>
+
+          <Button className="hidden-xs hidden-sm" bsStyle="warning" fill>Points : 0{user.points}</Button>
 
           <NavItem eventKey={1} href="http://ca.effe.org.in/account/">
             Account
