@@ -14,7 +14,7 @@ class HeaderLinks extends Component {
   }
 }
 componentDidMount(){
-  
+
 fetch(URL,
 { method:'GET',
 headers:{
@@ -47,7 +47,7 @@ headers:{
       <div>
         <Nav pullRight>
 
-          <Button className="hidden-xs hidden-sm" bsStyle="warning" fill>Points : {this.state.user.points}</Button>
+          <Button className="hidden-xs hidden-sm" bsStyle="warning" fill>Points : 0</Button>
 
           <NavItem eventKey={1} href="http://ca.effe.org.in/account/">
             Account
