@@ -25,14 +25,20 @@ headers:{
 
 })
 
-.then(response =>
-  {this.setState({user:response});
+.then(response => response.json())
+.then(json =>
+  {this.setState({user:json});
   console.log(this.state.user);
   })
 .catch(function (error)
 {
   console.log(error);
+  if(error.statusCode == 500)
+{window.location.href="http://www.google.co.in";}
+
+return false;
 });
+
 }
   render() {
     const notification = (
